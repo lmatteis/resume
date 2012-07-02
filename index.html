@@ -69,23 +69,26 @@
         .section {
             clear: both;
         }
-        .section .left {
+        .left {
             font-family: Georgia;
             color: #58595b;
             font-style: italic;
             font-size: 12.4px;
+        }
+        .section .left {
             float: left;
             text-align:right;
             margin-right: 12.4px;
             width: 60px;
         }
-        .section .right {
+        .right {
             font-family: 'MyriadPro-Regular';
             font-weight: normal;
             font-size: 14px;
+        }
+        .section .right {
             float: left;
             width: 310px;
-            letter-spacing: -0px;
         }
         /*
         .section .right a {
@@ -107,6 +110,29 @@
         .subsection {
             margin-top: 10px;
             line-height: 18px;
+        }
+
+
+
+        .sidebar {
+            position: absolute;
+            top: 168px;
+            left: 461px;
+            width: 230px;
+        }
+        .sidebar h1 {
+            font-size: 14px;
+            margin-bottom: 13px;
+            
+        }
+        .sidebar .right {
+            margin-top: 13px;
+        }
+        .sidebar .bull {
+            margin-left: 0;
+            margin-top: 15px;
+            padding:0;
+            margin-bottom: 15px;
         }
         </style>
     </head>
@@ -187,6 +213,26 @@
             <h1>London College of Communication</h1>
             <h2>First Class BA (Hons) Graphic Design</h2>
         </div>
+    </div>
+
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h1>Computer Skills</h1>
+
+        <div class="right">Adobe Creative Suite</div>
+        <div class="left multiline">Expert level</div>
+
+        <div class="right">Flash</div>
+        <div class="left multiline">Expert level in design and animation, basic knowledge of ActionScript 3</div>
+
+        <div class="bull">&bull;</div>
+
+        <h1>Interests</h1>
+        <div class="left multiline">Running</div>
+        <div class="left multiline">Snowboarding</div>
+        <div class="left multiline">Sci-fi</div>
+        <div class="left multiline">Astronomy</div>
     </div>
 
     </body>
