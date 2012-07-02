@@ -14,6 +14,10 @@
             font-family: 'MyriadPro-It';
             src: url('MyriadPro-It.otf');
         }
+        a {
+            color: black;
+            text-decoration: none;
+        }
         h1, h2{
             margin:0;
             padding:0;
@@ -21,14 +25,18 @@
         h1 {
             font-family: 'MyriadPro-Semibold';
             font-weight: normal;
-            font-size: 32px;
-            letter-spacing: -0.3px;
+            font-size: 25px;
+            letter-spacing: -0.1px;
         }
         h2 {
             font-family: 'MyriadPro-Regular';
             font-weight: normal;
-            font-size: 21px;
+            font-size: 16.5px;
             color: #00afa7;
+        }
+        .title {
+            margin-bottom: 10px;
+            margin-left: 72.4px;
         }
         .title h2 {
         }
@@ -36,18 +44,28 @@
             margin-bottom: -7px;
         }
 
-        .subtitle h1 {
+        .subtitle {
+            clear: both;
+            margin-left: 72.4px;
+            padding-top: 15px;
+        }
+
+        .subtitle h1, .right h1 {
             font-family: 'MyriadPro-Semibold';
             font-weight: normal;
-            font-size: 20px;
-            letter-spacing: -0.3px;
+            font-size: 15.4px;
         }
-        .subtitle h2 {
+        .subtitle h2, .right h2 {
 
-            font-size: 18px;
-            letter-spacing: -0.3px;
+            font-size: 13.6px;
         }
 
+        .italic {
+            font-family: Georgia;
+            color: #58595b;
+            font-style: italic;
+            font-size: 13px;
+        }
         .section {
             clear: both;
         }
@@ -55,43 +73,48 @@
             font-family: Georgia;
             color: #58595b;
             font-style: italic;
+            font-size: 12.4px;
             float: left;
             text-align:right;
-            margin-right: 15px;
-            width: 100px;
+            margin-right: 12.4px;
+            width: 60px;
         }
         .section .right {
             font-family: 'MyriadPro-Regular';
             font-weight: normal;
-            font-size: 18px;
+            font-size: 14px;
             float: left;
-            width: 380px;
+            width: 310px;
+            letter-spacing: -0px;
+        }
+        /*
+        .section .right a {
+            font-size: 14.2px;
             letter-spacing: -0.2px;
-            line-height: 22.7px;
+        }
+        */
+        .multiline {
+            line-height: 18px;
         }
         .bull {
             color: #00afa7;
-            font-size: 21px;
+            font-size: 15px;
+            clear: both;
+            margin-left: 72.4px;
+            padding-top:15px;
+            margin-bottom: 6px;
+        }
+        .subsection {
+            margin-top: 10px;
+            line-height: 18px;
         }
         </style>
     </head>
     <body>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
     <div class="title">
         <h1>Steven Stevenson</h1>
         <h2>Web Designer</h2>
     </div>
-    
-    <br>
-    <br>
-    <br>
-    <br>
 
     <div class="section">
         <div class="left">
@@ -119,11 +142,7 @@
     </div>
 
 
-    <br>
-    <br>
     <div class="bull">&bull;</div>
-    <br>
-    <br>
 
     <div class="subtitle">
         <h1>friendlyleopard.com</h1>
@@ -131,12 +150,44 @@
     </div>
     <div class="section">
         <div class="left">
-            Boh
+        June 2007 &minus; present
         </div>
         <div class="right">
             Responsible for the visual design and HTML/CSS templating for a social media site where people discuss their unusual pets.<br>
             Mentoring and guiding interns and junior team members. Overseeing and coordinating design of marketing materials.
         </div>
     </div>
+
+    <div class="subtitle">
+        <h1>misterstevenson.com</h1>
+        <h2>Freelance Designer</h2>
+    </div>
+    <div class="section">
+        <div class="left">
+        2005 &minus; present
+        </div>
+        <div class="right">
+            Worked on a multitude of web and corporate identity projects for a wide variety of clients.<br>
+            Providing identity and stationary design, webdesign, HTML/CSS development and WordPress integration (content management system).
+            <div class="subsection">
+                <div class="italic">Web projects include</div>
+                <a href="#">blueduckrecruit.com</a> &minus; <span class="italic">Recruitment Agency</span>
+                <a href="#">evildog.com</a> &minus; <span class="italic">Recruitment Agency</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="bull">&bull;</div>
+
+    <div class="section" style="margin-top: 15px;">
+        <div class="left">
+        2004 &minus; 2004
+        </div>
+        <div class="right">
+            <h1>London College of Communication</h1>
+            <h2>First Class BA (Hons) Graphic Design</h2>
+        </div>
+    </div>
+
     </body>
 </html>
