@@ -175,7 +175,7 @@ var QueryString = function () {
             var color = QueryString.color;
             var p = document.querySelectorAll("h2, .bull, i, i a");
             for ( var i = 0; i < p.length; i++ ) {
-                p[i].style.color = color;
+                p[i].style.color = '#' + color;
             }
             document.body.contentEditable='true'; 
             document.designMode='on';
