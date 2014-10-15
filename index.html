@@ -1,5 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+  prefix="
+    foaf: http://xmlns.com/foaf/0.1/
+    rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+    rdfs: http://www.w3.org/2000/01/rdf-schema#
+    dc: http://purl.org/dc/elements/1.1/"
+>
     <title>Luca Matteis</title>
     <head>
         <style>
@@ -16,8 +22,8 @@
             src: url('Fontin-Italic.otf');
         }
         body {
-            font-family: 'Fontin-Regular';
-            font-size: 13px;
+            font-family: 'Verdana';
+            font-size: 12px;
 
         }
         #wrap {
@@ -99,122 +105,52 @@ padding-left: 0;
         }
         </style>
     </head>
-<body>
+<body typeof="foaf:Person" about="http://lucaa.org/">
 <div id="wrap">
 
-    <h1 class="title">Luca Matteis</h1>
+    <h1 class="title" property="foaf:name">Luca Matteis</h1>
     <!--<h2 class="subtitle">Web Developer</h2>-->
     <hr/>
 
-    <p class="section">
+    <p class="section" property="rdfs:comment">
         Researcher at the Department of Computer Science<br>
         University of Rome &ldquo;La Sapienza&rdquo;
     </p>
 
-    <p class="section none">
-        +39 339 75 65 532
-        <span class="left">mobile</span>
-    </p>
 
-    <p class="section none">lmatteis@gmail.com
-        <span class="left">email</span>
+    <p class="section none">
+        <span class="left">id</span>
+        <a href="http://lucaa.org/">http://lucaa.org/</a> (I contain RDFa)
     </p>
-    <p class="section none"><a href="http://lucaa.org">lucaa.org</a>
-        <span class="left">url</span>
+    <p class="section none">
+        <span property="foaf:mbox">lmatteis -at- gmail.com</span>
+        <span class="left">email</span>
     </p>
 
     <hr/>
 
-    <p>
-        Born: November 24, 1986&mdash;Rome, Italy<br>
-        Nationality: Italian/American
-    </p>
-
-    <h2>Professional experience</h2>
-    <ul>
-        <li>
-            <h3>Bioversity International <small>Rome, Italy</small></h3>
-            <h4>Software Developer</h4>
-            <span class="date">May 2010 &mdash; Sept 2014
-                <span class="small">(4 years)</span>
-            </span>
-            <p>
-            Responsible for the development and design of the <i><a href="http://www.cropontology.org">Crop Ontology</a></i> site where people can learn and discuss about crop varieties and traits.
-                                    Worked closely with the users to understand their needs for the application.
-                                                Developed and maintained other smaller websites in use by the scientific community.
-            </p>
-        </li>
-        <li>
-            <h3>Pseudo Codice <small>Chicago, IL, USA</small></h3>
-            <h4>Software Engineer</h4>
-            <span class="date">
-                Nov 2009 &mdash; May 2010
-                <span class="small">(7 months)</span>
-            </span>
-            <p>
-                Worked on a multitude of desktop and web applications for a wide variety of clients.
-                Responsible for creating secure and tested software using <i>agile development</i> methodologies.
-            </p>
-
-        </li>
-        <li>
-            <h3>OnlyWire <small>Sacramento, CA, USA</small></h3>
-            <h4>Java Developer</h4>
-            <span class="date">
-                Mar 2008 &mdash; Nov 2009
-                <span class="small">(20 months)</span>
-            </span>
-            <p>
-                Developed the entire HTML, CSS and JavaScript user experience for their website. Engineered the backend using the <i>Play!</i> Java framework.
-                Worked closely with the web development team to ensure technical feasibility and correct design implementation.
-            </p>
-        </li>
-
-    <li>
-        <h3>CherryOne <small>Chicago, IL, USA</small></h3>
-        <h4>Web Developer</h4>
-        <span class="date">
-        Jan 2007 &mdash; Mar 2008 <br> <span class="small">(14 months)</span>
-        </span>
-        <p>
-            Developed and maintained sites using a LAMP stack (Linux, Apache, MySQL and PHP).
-            Worked with many different PHP frameworks with extensive use of the popular MVC design pattern.
-        </p>
-
-    </li>
-
-    <li>
-        <h3>Bioversity International <small>Rome, Italy</small></h3>
-        <h4>Database Intern</h4>
-        <span class="date">
-        July 2005 &mdash; Dec 2006 <br> <span class="small">(18 months)</span>
-        </span>
-        <p>
-            Automated the migration of Microsoft's Excel inventory data sheets into an SQL relational database.
-            Daily help-desk assistance for computer related issues.
-        </p>
-    </li>
-
-    </ul>
 
     <h2>Publications</h2>
     <ul>
-    <li>Luca Matteis, Ruben Verborgh. &ldquo;<a href="http://ceur-ws.org/Vol-1268/paper3.pdf">Hosting Queryable and Highly Available Linked Data for Free</a>.&rdquo; <em>ISWC Developers Workshop (ISWC-dev) at ISWC 2014</em> (2014).</li>
-    <li>Luca Matteis. &ldquo;<a href="http://arxiv.org/pdf/1408.6691v1.pdf">VoID-graph: Visualize Linked Datasets on the Web</a>.&rdquo; <em>arXiv preprint arXiv:1408.6691</em> (2014).</li>
-    <li>Luca Matteis. &ldquo;<a href="http://arxiv.org/pdf/1408.4793v1.pdf">Restpark: Minimal RESTful API for Retrieving RDF Triples.</a>&rdquo; <em>arXiv preprint arXiv:1408.4793</em> (2013).</li>
-    <li>Luca Matteis, Pierre-Yves Chibon, Herlin Espinosa, Milko Skofic, Richard Finkers, Richard Bruskiewich, Glenn Hyman, and Elizabeth Arnaud. &ldquo;<a href="http://ceur-ws.org/Vol-979/WS_s4biodiv2013_paper_4.pdf">Crop Ontology: Vocabulary For Crop-related Concepts.</a>&rdquo; <em>Semantics for Biodiversity Workshop (S4BioDiv 2013) at ESWC 2013.</em> (2013): 37.</li>
+        <li>Luca Matteis, Ruben Verborgh. &ldquo;<a property="foaf:publications" href="http://ceur-ws.org/Vol-1268/paper3.pdf">Hosting Queryable and Highly Available Linked Data for Free</a>.&rdquo; <em>ISWC Developers Workshop (ISWC-dev) at ISWC 2014</em> (2014).</li>
+        <li>Luca Matteis. &ldquo;<a property="foaf:publications" href="http://arxiv.org/pdf/1408.6691v1.pdf">VoID-graph: Visualize Linked Datasets on the Web</a>.&rdquo; <em>arXiv preprint arXiv:1408.6691</em> (2014).</li>
+        <li>Luca Matteis. &ldquo;<a property="foaf:publications" href="http://arxiv.org/pdf/1408.4793v1.pdf">Restpark: Minimal RESTful API for Retrieving RDF Triples.</a>&rdquo; <em>arXiv preprint arXiv:1408.4793</em> (2013).</li>
+        <li>Luca Matteis, Pierre-Yves Chibon, Herlin Espinosa, Milko Skofic, Richard Finkers, Richard Bruskiewich, Glenn Hyman, and Elizabeth Arnaud. &ldquo;<a property="foaf:publications" href="http://ceur-ws.org/Vol-979/WS_s4biodiv2013_paper_4.pdf">Crop Ontology: Vocabulary For Crop-related Concepts.</a>&rdquo; <em>Semantics for Biodiversity Workshop (S4BioDiv 2013) at ESWC 2013.</em> (2013): 37.</li>
     </ul>
 
     <h2>Other</h2>
-    <h3>Online presence</h3>
     <ul>
-        <li><a href="http://scholar.google.com/citations?user=4shOPsgAAAAJ">Google Scholar</a></li>
-        <li><a href="http://stackoverflow.com/users/50394/luca-matteis">Stack Overflow</a></li>
-        <li><a href="https://github.com/lmatteis">GitHub</a></li>
-        <li><a href="http://bitcoin.stackexchange.com/users/8717/luca-matteis">Bitcoin Stack Exchange</a></li>
-        <li><a href="http://answers.semanticweb.com/users/2697/luca-matteis">Semantic Web Answers</a></li>
+        <li><a property="foaf:homepage" href="http://scholar.google.com/citations?user=4shOPsgAAAAJ">Google Scholar</a></li>
+        <li><a property="foaf:homepage" href="http://stackoverflow.com/users/50394/luca-matteis">Stack Overflow</a></li>
+        <li><a property="foaf:homepage" href="https://github.com/lmatteis">GitHub</a></li>
+        <li><a property="foaf:homepage" href="http://bitcoin.stackexchange.com/users/8717/luca-matteis">Bitcoin Stack Exchange</a></li>
+        <li><a property="foaf:homepage" href="http://answers.semanticweb.com/users/2697/luca-matteis">Semantic Web Answers</a></li>
+        <li><a property="foaf:homepage" href="https://twitter.com/lmatteis">Twitter</a></li>
 
     </ul>
+
+    <div style="display:none;" property="foaf:knows" resource="http://aidanhogan.com/foaf.rdf"></div>
+    <div style="display:none;" property="foaf:knows" resource="http://www.kjetil.kjernsmo.net/foaf#me"></div>
 
 
 
