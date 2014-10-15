@@ -3,342 +3,219 @@
     <head>
         <style>
         @font-face {
-            font-family: 'MyriadPro-Regular';
-            src: url('MyriadPro-Regular.otf');
+            font-family: 'Fontin-Regular';
+            src: url('Fontin-Regular.otf');
         }
         @font-face {
-            font-family: 'MyriadPro-Semibold';
-            src: url('MyriadPro-Semibold.otf');
+            font-family: 'Fontin-Bold';
+            src: url('Fontin-Bold.otf');
         }
         @font-face {
-            font-family: 'MyriadPro-It';
-            src: url('MyriadPro-It.otf');
+            font-family: 'Fontin-Italic';
+            src: url('Fontin-Italic.otf');
         }
-        h2, .bull, i, i a {
-            color: #00afa7;
-        }
-        small {
-            font-family: 'MyriadPro-It';
-            font-weight: normal;
+        body {
+            font-family: 'Fontin-Regular';
+            font-size: 13px;
 
         }
-        i {
-            font-family: 'MyriadPro-It';
+        #wrap {
+            width: 530px;
+            margin:auto;
+            margin-bottom:100px;
+            margin-top: 100px;
+        }
+        * {
             font-weight: normal;
+            position: relative;
         }
         a {
-            color: black;
+            color: #0433FF;
             text-decoration: none;
         }
-        h1, h2{
+        h1 {
+            font-size: 24px;
+        }
+        h1.title{
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+        h2 {
+            margin-top:30px;
+        }
+        h2.subtitle {
+            margin-top: 0px;
+            margin-top:0px;
+            font-size: 14px;
+        }
+        h3 {
+            margin-bottom: 10px;
+        }
+        h3 small {
+            font-weight: normal;
+            font-family: "Fontin-Regular";
+        }
+        p.section {
+            margin-top:0;
+            margin-bottom:7px;
+        }
+        p.section.none {
+            margin:0;
+        }
+        hr {
+            border:0;
+            height: 30px;
+
+        }
+        .left, .date {
+            position: absolute;
+            top:3px;
+            color:#58595b;
+            left:-80px;
+            font-size: 10px;
+            line-height: 1;
+            width: 70px;
+            display: block;
+            text-align: right;
+
+        }
+        .date .small {
+        display: block;
+        }
+        ul li h3 {
+            margin:0;
+            font-family: "Fontin-Bold";
+            padding:0;
+        }
+        ul li h4 {
             margin:0;
             padding:0;
         }
-        h1 {
-            font-family: 'MyriadPro-Semibold';
-            font-weight: normal;
-            font-size: 25px;
-            letter-spacing: -0.1px;
-        }
-        h2 {
-            font-family: 'MyriadPro-Regular';
-            font-weight: normal;
-            font-size: 16px;
-        }
-        .title {
-            margin-bottom: 10px;
-            margin-left: 72.4px;
-        }
-        .title h2 {
-        }
-        .title h1 {
-            margin-bottom: -5px;
-        }
-
-        .subtitle {
-            clear: both;
-            margin-left: 72.4px;
-            padding-top: 15px;
-        }
-
-        .subtitle h1, .right h1 {
-            font-family: 'MyriadPro-Semibold';
-            font-weight: normal;
-            font-size: 15.4px;
-        }
-        .subtitle h2, .right h2 {
-
-            font-size: 13.6px;
-        }
-
-        .italic {
-            font-family: Georgia;
-            color: #58595b;
-            font-style: italic;
-            font-size: 13px;
-        }
-        .section {
-            clear: both;
-        }
-        .left {
-            font-family: Georgia;
-            color: #58595b;
-            font-style: italic;
-            font-size: 12.4px;
-        }
-        .section .left {
-            float: left;
-            text-align:right;
-            margin-right: 12.4px;
-            width: 60px;
-        }
-        .right {
-            font-family: 'MyriadPro-Regular';
-            font-weight: normal;
-            font-size: 14px;
-        }
-        .section .right {
-            float: left;
-            width: 310px;
-        }
-        /*
-        .section .right a {
-            font-size: 14.2px;
-            letter-spacing: -0.2px;
-        }
-        */
-        .multiline {
-            line-height: 18px;
-        }
-        .bull {
-            font-size: 15px;
-            clear: both;
-            margin-left: 72.4px;
-            padding-top:15px;
-            margin-bottom: 6px;
-        }
-        .subsection {
-            margin-top: 10px;
-            line-height: 18px;
-        }
-
-
-
-        .sidebar {
-            position: absolute;
-            top: 168px;
-            left: 461px;
-            width: 230px;
-        }
-        .sidebar h1 {
-            font-size: 14px;
-            margin-bottom: 13px;
-            
-        }
-        .sidebar .right {
-            margin-top: 13px;
-        }
-        .sidebar .bull {
-            margin-left: 0;
-            margin-top: 15px;
-            padding:0;
-            margin-bottom: 15px;
-        }
-        .small {
-            font-size: 10px;
+        ul {
+        list-style: none;
+margin-left: 0;
+padding-left: 0;
         }
         </style>
-        <script>
-var QueryString = function () {
-  // This function is anonymous, is executed immediately and 
-  // the return value is assigned to QueryString!
-  var query_string = {};
-  var query = window.location.search.substring(1);
-  var vars = query.split("&");
-  for (var i=0;i<vars.length;i++) {
-    var pair = vars[i].split("=");
-        // If first entry with this name
-    if (typeof query_string[pair[0]] === "undefined") {
-      query_string[pair[0]] = pair[1];
-        // If second entry with this name
-    } else if (typeof query_string[pair[0]] === "string") {
-      var arr = [ query_string[pair[0]], pair[1] ];
-      query_string[pair[0]] = arr;
-        // If third or later entry with this name
-    } else {
-      query_string[pair[0]].push(pair[1]);
-    }
-  } 
-    return query_string;
-} ();
-/*
-        window.onload = function() {
-            var color = QueryString.color;
-            var p = document.querySelectorAll("h2, .bull, i, i a");
-            for ( var i = 0; i < p.length; i++ ) {
-                p[i].style.color = '#' + color;
-            }
-            document.body.contentEditable='true'; 
-            document.designMode='on';
-        }
-        */
-        </script>
     </head>
-    <body>
-    <div class="title">
-        <h1>Luca Matteis</h1>
-        <h2>Web Developer</h2>
-    </div>
+<body>
+<div id="wrap">
 
-    <div class="section">
-        <div class="left">
-            mobile
-        </div>
-        <div class="right">
-            +39 339 75 65 532
-        </div>
-    </div>
-    <div class="section">
-        <div class="left">
-            email
-        </div>
-        <div class="right">
-            lmatteis@gmail.com
-        </div>
-    </div>
-    <div class="section">
-        <div class="left">
-            web
-        </div>
-        <div class="right">
-            <a href="http://lucaa.org">lucaa.org</a>
-        </div>
-    </div>
+    <h1 class="title">Luca Matteis</h1>
+    <!--<h2 class="subtitle">Web Developer</h2>-->
+    <hr/>
 
+    <p class="section">
+        Researcher at the Department of Computer Science<br>
+        University of Rome &ldquo;La Sapienza&rdquo;
+    </p>
 
-    <div class="bull">&bull;</div>
+    <p class="section none">
+        +39 339 75 65 532
+        <span class="left">mobile</span>
+    </p>
 
-    <div class="subtitle">
-        <h1>Bioversity International <small>Rome, Italy</small></h1>
-        <h2>Web Developer</h2>
-    </div>
-    <div class="section">
-        <div class="left">
-            May 2010 &minus; present
-        </div>
-        <div class="right">
+    <p class="section none">lmatteis@gmail.com
+        <span class="left">email</span>
+    </p>
+    <p class="section none"><a href="http://lucaa.org">lucaa.org</a>
+        <span class="left">url</span>
+    </p>
+
+    <hr/>
+
+    <p>
+        Born: November 24, 1986&mdash;Rome, Italy<br>
+        Nationality: Italian/American
+    </p>
+
+    <h2>Professional experience</h2>
+    <ul>
+        <li>
+            <h3>Bioversity International <small>Rome, Italy</small></h3>
+            <h4>Software Developer</h4>
+            <span class="date">May 2010 &mdash; Sept 2014
+                <span class="small">(4 years)</span>
+            </span>
+            <p>
             Responsible for the development and design of the <i><a href="http://www.cropontology.org">Crop Ontology</a></i> site where people can learn and discuss about crop varieties and traits.
-            <br>
-            Working closely with the users to understand their needs for the application.
-            Developing and maintaining other smaller websites in use by the scientific community.
-        </div>
-    </div>
+                                    Worked closely with the users to understand their needs for the application.
+                                                Developed and maintained other smaller websites in use by the scientific community.
+            </p>
+        </li>
+        <li>
+            <h3>Pseudo Codice <small>Chicago, IL, USA</small></h3>
+            <h4>Software Engineer</h4>
+            <span class="date">
+                Nov 2009 &mdash; May 2010
+                <span class="small">(7 months)</span>
+            </span>
+            <p>
+                Worked on a multitude of desktop and web applications for a wide variety of clients.
+                Responsible for creating secure and tested software using <i>agile development</i> methodologies.
+            </p>
 
-    <div class="subtitle">
-        <h1>Pseudo Codice <small>Chicago, IL, USA</small></h1>
-        <h2>Software Engineer</h2>
-    </div>
-    <div class="section">
-        <div class="left">
-        Nov 2009 &minus; May 2010
-        <br> <span class="small">(7 months)</span>
-        </div>
-        <div class="right">
-            Worked on a multitude of desktop and web applications for a wide variety of clients.
-            <br>
-            Responsible for creating secure and tested software using <i>agile development</i> methodologies.
-        </div>
-    </div>
+        </li>
+        <li>
+            <h3>OnlyWire <small>Sacramento, CA, USA</small></h3>
+            <h4>Java Developer</h4>
+            <span class="date">
+                Mar 2008 &mdash; Nov 2009
+                <span class="small">(20 months)</span>
+            </span>
+            <p>
+                Developed the entire HTML, CSS and JavaScript user experience for their website. Engineered the backend using the <i>Play!</i> Java framework.
+                Worked closely with the web development team to ensure technical feasibility and correct design implementation.
+            </p>
+        </li>
 
-    <div class="subtitle">
-        <h1>OnlyWire <small>Sacramento, CA, USA</small></h1>
-        <h2>Java Developer</h2>
-    </div>
-    <div class="section">
-        <div class="left">
-        Mar 2008 &minus; Nov 2009
-        <br> <span class="small">(20 months)</span>
-        </div>
-        <div class="right">
-            Developed the entire HTML, CSS and JavaScript user experience for their website. Engineered the backend using the <i>Play!</i> Java framework.
-            <br>
-            Worked closely with the web development team to ensure technical feasibility and correct design implementation.
-        </div>
-    </div>
-
-    <div class="subtitle">
-        <h1>CherryOne <small>Chicago, IL, USA</small></h1>
-        <h2>Web Developer</h2>
-    </div>
-    <div class="section">
-        <div class="left">
-        Jan 2007 &minus; Mar 2008 <br> <span class="small">(14 months)</span>
-        </div>
-        <div class="right">
+    <li>
+        <h3>CherryOne <small>Chicago, IL, USA</small></h3>
+        <h4>Web Developer</h4>
+        <span class="date">
+        Jan 2007 &mdash; Mar 2008 <br> <span class="small">(14 months)</span>
+        </span>
+        <p>
             Developed and maintained sites using a LAMP stack (Linux, Apache, MySQL and PHP).
-            <br>
             Worked with many different PHP frameworks with extensive use of the popular MVC design pattern.
-        </div>
-    </div>
+        </p>
 
+    </li>
 
-    <div class="subtitle">
-        <h1>Bioversity International <small>Rome, Italy</small></h1>
-        <h2>Database Intern</h2>
-    </div>
-    <div class="section">
-        <div class="left">
-        July 2005 &minus; Dec 2006 <br> <span class="small">(18 months)</span>
-        </div>
-        <div class="right">
+    <li>
+        <h3>Bioversity International <small>Rome, Italy</small></h3>
+        <h4>Database Intern</h4>
+        <span class="date">
+        July 2005 &mdash; Dec 2006 <br> <span class="small">(18 months)</span>
+        </span>
+        <p>
             Automated the migration of Microsoft's Excel inventory data sheets into an SQL relational database.
             Daily help-desk assistance for computer related issues.
-        </div>
-    </div>
+        </p>
+    </li>
+
+    </ul>
+
+    <h2>Publications</h2>
+    <ul><li>Matteis, Luca. &ldquo;<a href="http://arxiv.org/pdf/1408.6691v1.pdf">VoID-graph: Visualize Linked Datasets on the Web</a>.&rdquo; <em>arXiv preprint arXiv:1408.6691</em> (2014).</li>
+    <li>Matteis, Luca. &ldquo;<a href="http://arxiv.org/pdf/1408.4793v1.pdf">Restpark: Minimal RESTful API for Retrieving RDF Triples.</a>&rdquo; <em>arXiv preprint arXiv:1408.4793</em> (2013).</li>
+    <li>Matteis, Luca, Pierre-Yves Chibon, Herlin Espinosa, Milko Skofic, Richard Finkers, Richard Bruskiewich, Glenn Hyman, and Elizabeth Arnaud. &ldquo;<a href="http://ceur-ws.org/Vol-979/WS_s4biodiv2013_paper_4.pdf">Crop Ontology: Vocabulary For Crop-related Concepts.</a>&rdquo; <em>Semantics for Biodiversity (S4BioDiv 2013)</em> (2013): 37.</li>
+    </ul>
+
+    <h2>Other</h2>
+    <h3>Online presence</h3>
+    <ul>
+        <li><a href="http://scholar.google.com/citations?user=4shOPsgAAAAJ">Google Scholar</a></li>
+        <li><a href="http://stackoverflow.com/users/50394/luca-matteis">Stack Overflow</a></li>
+        <li><a href="https://github.com/lmatteis">GitHub</a></li>
+        <li><a href="http://bitcoin.stackexchange.com/users/8717/luca-matteis">Bitcoin Stack Exchange</a></li>
+        <li><a href="http://answers.semanticweb.com/users/2697/luca-matteis">Semantic Web Answers</a></li>
+
+    </ul>
 
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <h1>Programming Languages</h1>
-        <div class="right">JavaScript, Java, PHP, C</div>
-        <div class="left multiline">Expert level</div>
-
-        <div class="right">Python, Ruby, C++, C#</div>
-        <div class="left multiline">Good working knowledge</div>
-
-        <div class="bull">&bull;</div>
-
-        <h1>Software and Libraries</h1>
-
-        <div class="left multiline">CouchDB, Google App Engine, Node.js, jQuery, WebRTC, Bitcoin</div>
-
-        <div class="bull">&bull;</div>
-
-        <h1>Interests</h1>
-        <div class="left multiline">Running</div>
-        <div class="left multiline">Playing guitar</div>
-        <div class="left multiline">Snowboarding</div>
-        <div class="left multiline">Reading science fiction</div>
-        <div class="left multiline">Astronomy</div>
-
-        <div class="bull">&bull;</div>
-
-        <h1>Online Presence</h1>
-        <div class="left multiline"><i><a href="https://github.com/lmatteis">github.com/lmatteis</a></i></div>
-        <div class="left multiline"><i><a href="http://stackoverflow.com/users/50394/luca-matteis">stackoverflow.com/users/50394/luca-matteis</a></i></div>
-        <div class="left multiline"><i><a href="http://bitcoin.stackexchange.com/users/8717/luca-matteis">bitcoin.stackexchange.com/users/8717/luca-matteis</a></i></div>
 
 
-        <div class="bull">&bull;</div>
-
-        <h1>Education</h1>
-        <div class="right">Design with software development</div>
-        <div class="left multiline">The Open University
-            &minus;
-            <span class="small">not yet completed</span>
-        </div>
-        
-    </div>
-
-    </body>
+</div>
+</body>
 </html>
