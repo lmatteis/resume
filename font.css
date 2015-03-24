@@ -40,6 +40,9 @@
             color: #0433FF;
             text-decoration: none;
         }
+        h1,h2,h3,h4 {
+            font-weight:800;
+        }
         h1 {
             font-size: 24px;
         }
