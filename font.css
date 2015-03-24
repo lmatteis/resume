@@ -22,8 +22,7 @@
         body {
             font-size: 13px;
             line-height: 20px;
-            font-size: 13px;
-            font-family: "Whitney SSm A";
+            font: 400 13px/20px "Whitney SSm A","Whitney SSm B","Georgia","Times New Roman",Serif;
 
         }
         #wrap {
